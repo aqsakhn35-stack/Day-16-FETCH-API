@@ -34,12 +34,13 @@ No build step needed — it's plain HTML/CSS/JS.
 2. Serve the folder locally using Live Server (VS Code extension), **or**
    ```bash
    python3 -m http.server 8000
+   
    ## Screenshots
 
 ### Loading State
 
 
-![Loading State](screenshots/Loading%20state.png)
+![Loading State](screenshots/loading%20state.png)
 
 
 
@@ -53,4 +54,4 @@ No build step needed — it's plain HTML/CSS/JS.
 ### Remaining Cards
 
 
-![Remaining Cards](screenshots/Remaining.png)
+![Remaining Cards](screenshots/remaining.png)
