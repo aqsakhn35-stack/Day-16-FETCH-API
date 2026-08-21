@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Directory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="brand">
+        <span class="brand__mark">UD</span>
+        <div class="brand__text">
+          <h1>User Directory</h1>
+          <p>Team roster, pulled live</p>
+        </div>
+      </div>
+      <button id="reloadBtn" class="reload-btn" type="button">
+        <span class="reload-btn__icon">&#8635;</span> Reload
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="loadingState" class="state state--loading" hidden>
+      <div class="skeleton-grid" aria-live="polite" aria-busy="true">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+      <p class="state__caption">Fetching directory entries&hellip;</p>
+    </section>
+
+    <section id="errorState" class="state state--error" hidden>
+      <div class="state__icon">&#9888;</div>
+      <h2>Directory unavailable</h2>
+      <p id="errorMessage">We couldn't reach the server. Check your connection and try again.</p>
+      <button id="retryBtn" class="retry-btn" type="button">Try again</button>
+    </section>
+
+    <section id="emptyState" class="state state--empty" hidden>
+      <div class="state__icon">&#128100;</div>
+      <h2>No users found</h2>
+      <p>The directory is currently empty. Check back later.</p>
+    </section>
+
+    <section id="userGrid" class="user-grid" hidden aria-live="polite"></section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Data via JSONPlaceholder &middot; Day 16 &mdash; Fetch API Task</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
