@@ -32,26 +32,39 @@ No build step needed — it's plain HTML/CSS/JS.
 
 1. Open `index.html` directly in a browser, **or**
 2. Serve the folder locally using Live Server (VS Code extension), **or**
+3. Run a local server:
    ```bash
    python3 -m http.server 8000
-   
-   ## Screenshots
+   ```
+
+## Screenshots
 
 ### Loading State
-
-
 ![Loading State](screenshots/loading%20state.png)
 
-
-
 ### Cards / Data
-
-
 ![Cards](screenshots/card%20showpn.PNG)
 
-
-
 ### Remaining Cards
-
-
 ![Remaining Cards](screenshots/remaining.png)
+
+## Git Workflow
+
+This repository follows standard Git branching and commit conventions used in professional development teams:
+
+**Branch Naming**
+- `feature/<name>` — for new features (e.g. `feature/fetch-user-directory`)
+- `bugfix/<name>` — for bug fixes (e.g. `bugfix/error-state-handling`)
+- `docs/<name>` — for documentation updates (e.g. `docs/readme-update`)
+
+**Commit Conventions**
+This project follows [Conventional Commits](https://www.conventionalcommits.org):
+- `feat:` — a new feature (e.g. `feat: add loading and error states`)
+- `fix:` — a bug fix (e.g. `fix: handle failed fetch requests`)
+- `docs:` — documentation changes (e.g. `docs: update project structure`)
+
+**Merge Process**
+- Work is done on feature/bug-fix branches, never directly on `main`.
+- Changes are submitted via pull requests and reviewed before merging.
+- Merge conflicts, when they occur, are resolved carefully to ensure all changes are preserved and application functionality remains intact.
+-
